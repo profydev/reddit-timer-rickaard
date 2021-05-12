@@ -10,9 +10,13 @@ import SearchPage from './pages/SearchPage';
 
 import Header from './components/Header';
 
+const theme = {
+  primaryColor: '#FDB755',
+};
+
 function App() {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <Router>
         <Normalize />
         <GlobalStyle />
