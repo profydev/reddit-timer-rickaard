@@ -1,9 +1,11 @@
 import React from 'react';
 
-const SearchPage = () => (
-  <div>
-    SeachPage
-  </div>
-);
+function SearchPage() {
+  return (
+    <div>
+      Search page
+    </div>
+  );
+}
 
 export default SearchPage;
