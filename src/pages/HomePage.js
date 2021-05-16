@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function HomePage() {
   return (
     <Container>
-      homepage
+      <h1>Home page</h1>
     </Container>
   );
 }

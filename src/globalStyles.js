@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Montserrat", sans-serif;
+    font-family: ${(props) => props.theme.font.family.default};
     font-size: 16px;
     line-height: 1.69;
     color: #93918F;
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1,h2,h3,h4, h5, h6 {
     color: #000;
-    font-family: "Bitter", serif;
+    font-family: ${(props) => props.theme.font.family.headline};
     font-weight: normal;
     text-align: center;
   }
