@@ -2,30 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import logo from '../assets/logo.png';
+import { ReactComponent as logo } from '../assets/logo.svg';
 
 function Header() {
   return (
-    <Container>
+    <StyledHeader>
       <Nav>
         <LogoContainer>
-          <Link to="/">
-            <img src={logo} alt="Logotype" />
-          </Link>
+          <Link to="/"><StyledLogo /></Link>
         </LogoContainer>
         <LinksContainer>
-          <Link to="/search/javascript">Search</Link>
-          <Link to="#how-it-works">How it works</Link>
-          <Link to="#about">About</Link>
+          <StyledLink to="/search/javascript">Search</StyledLink>
+          <StyledLink to="/#how-it-works">How it works</StyledLink>
+          <StyledLink to="/#about">About</StyledLink>
         </LinksContainer>
       </Nav>
-    </Container>
+    </StyledHeader>
   );
 }
 
 export default Header;
 
-const Container = styled.header`
+const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -33,6 +31,10 @@ const Container = styled.header`
 
 const LogoContainer = styled.div`
 
+`;
+
+const StyledLogo = styled(logo)`
+  margin-bottom: -8px;
 `;
 
 const Nav = styled.nav`
@@ -47,13 +49,12 @@ const LinksContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+`;
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  a:not(:last-child) {
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  &:not(:last-child) {
     margin-right: 21px;
   }
 `;
