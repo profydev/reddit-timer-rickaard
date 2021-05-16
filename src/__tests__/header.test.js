@@ -29,7 +29,7 @@ describe('Header links', () => {
     const logoLink = screen.getByRole('link', { name: /logo.svg/i });
     userEvent.click(logoLink);
 
-    const homePageText = screen.getByText(/homepage/i);
+    const homePageText = screen.getByText(/home page/i);
     expect(homePageText).toBeInTheDocument();
   });
 
